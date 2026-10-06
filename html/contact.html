@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVE It</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="icon" title="icon/image" href="../svg's/svg_Home/box-seam.svg">
+    <link rel="stylesheet" href="../styles/generale.css">
+</head>
+
+<body>
+    <style>
+
+    </style>
+
+    <nav class=" navbar navbar-expand-lg bg-body-tertiary my-navbar ">
+        <div class="container-fluid mx-5">
+            <a class="navbar-brand" href="../index.html"><img src="../svg's/svg_Home/box-seam.svg" alt=""><span>MOVE
+                    It</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-3" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-3" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-3" href=".services.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item fs-4" href="./services.html">Home Moving</a></li>
+                            <li><a class="dropdown-item fs-4" href="./services.html">Furniture Transport</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item fs-4" href="./services.html">Packing & Unpacking</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2  search-input" type="search" placeholder="Codepostal"
+                        aria-label="Search" />
+                    <button class="btn btn-outline-success fs-5" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <main>
+            <div class="py-5 text-center"> <img class="d-block mx-auto mb-4" src="../svg's/svg_Home/box-seam.svg" alt=""
+                    width="72" height="57">
+                <h1 class="h2">Tell us about your move</h1>
+                <p class="lead">Where are you heading, and what’s coming with you? Share a few details so we can help
+                    make your moving day easier.</p>
+            </div>
+            <div class="row  g-5 d-flex justify-content-center">
+
+                <div class="col-md-7 col-lg-8">
+                    <form class="needs-validation was-validated" novalidate="">
+                        <h4 class="mb-3">Contact</h4>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Last name</label> <input type="text"
+                                    class="form-control" id="lastName" placeholder="" value="" required="">
+                                <div class="invalid-feedback">
+                                    Valid last name is required.
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="email" class="form-label">Email</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">@</span>
+                                    <input type="email" class="form-control" id="username"
+                                        placeholder="example@gmail.com" required="">
+                                    <div class="invalid-feedback">
+                                        Your Email is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="phone" class="form-label">Phone number</label>
+                                <div class="input-group has-validation">
+                                    <div class="input-group mb-3">
+                                        <select class="form-select" name="countryCode" aria-label="Country calling code"
+                                            style="max-width: 150px;">
+                                            <option value="">Code</option>
+                                            <option value="+49">🇩🇪 +49</option>
+                                            <option value="+212">🇲🇦 +212</option>
+                                            <option value="+33">🇫🇷 +33</option>
+                                        </select>
+
+                                        <input type="tel" class="form-control" id="phone" name="phone"
+                                            autocomplete="tel-national" placeholder="Phone number" required>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Your Phone number is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="Moving_date" class="form-label">Moving date</label>
+                                <input type="date" class="form-control" id="date" placeholder="" value="" required="">
+                                <div class="invalid-feedback">
+                                    Don't forget date
+                                </div>
+                            </div>
+
+
+                    </form>
+
+                    <form class="mt-5 row needs-validation was-validated" novalidate="">
+                        <h4 class="mb-3">Pickup address</h4>
+                        <div class="col-md-12">
+                            <label for="state" class="form-label">State</label> <select class="form-select" id="state"
+                                required="">
+                                <option value="">Choose please</option>
+                                <option>Baden-Württemberg</option>
+                                <option>Bavaria</option>
+                                <option>Saxony</option>
+                                <option>Brandenburg</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom03" class="form-label">City</label>
+                            <input type="text" class="form-control" id="validationCustom03" required="">
+                            <div class="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="validationCustom05" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="validationCustom05" required="">
+                            <div class="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="validationCustom05" class="form-label">Street</label>
+                            <input type="text" class="form-control" id="validationCustom05">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom05" class="form-label">House Number</label>
+                            <input required type="number" class="form-control" id="validationCustom05">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="state" class="form-label">Elevator</label> <select class="form-select"
+                                id="elevator" required="">
+                                <option value="">Confirm please</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please Confirm for us.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom05" class="form-label">Floor</label>
+                            <input required type="number" class="form-control" id="validationCustom05">
+                        </div>
+                    </form>
+
+                    <form class="mt-5 row needs-validation was-validated" novalidate="">
+                        <h4 class="mb-3">Delivery address</h4>
+                        <div class="col-md-12">
+                            <label for="state" class="form-label">State</label> <select class="form-select" id="state"
+                                required="">
+                                <option value="">Choose please</option>
+                                <option>Baden-Württemberg</option>
+                                <option>Bavaria</option>
+                                <option>Saxony</option>
+                                <option>Brandenburg</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom03" class="form-label">City</label>
+                            <input type="text" class="form-control" id="validationCustom03" required="">
+                            <div class="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="validationCustom05" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="validationCustom05" required="">
+                            <div class="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="validationCustom05" class="form-label">Street</label>
+                            <input type="text" class="form-control" id="validationCustom05">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom05" class="form-label">House Number</label>
+                            <input required type="number" class="form-control" id="validationCustom05">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="state" class="form-label">Elevator</label> <select class="form-select"
+                                id="elevator" required="">
+                                <option value="">Confirm please</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please Confirm for us.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom05" class="form-label">Floor</label>
+                            <input required type="number" class="form-control" id="validationCustom05">
+                        </div>
+                    </form>
+
+                    <form class="mt-5 row needs-validation was-validated" novalidate="">
+                        <h4 class="mb-3">More details</h4>
+                        <div class="col-md-6 mb-5">
+                            <label for="type_of_move" class="form-label">Type of move</label> <select
+                                class="form-select" id="type_of_move">
+                                <option value="">Entire home</option>
+                                <option>few furniture items</option>
+                                <option>Boxes only</option>
+                                <option>Office move</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <label class="form-label" for="form-label">Comment</label>
+                            <textarea class="form-control" name="comment"
+                                placeholder="Share any additional details you’d like us to consider when planning your move."
+                                id="floatingTextarea2" style="height: 100px"></textarea>
+
+                        </div>
+                    </form>
+
+                    <hr class="my-4">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary mb-5" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Submit </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thanks, We’ve got your details
+                                        📦</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    We’ll take a look at your moving needs and get in touch soon to figure out what
+                                    works best for you. Let’s MOVE It
+                                    together!
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="./thankYou.html">
+                                        <button type="button" class="btn btn-primary">MOVE It</button>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+    <footer class="px-4 px-md-5 py-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+
+            <div class="col d-flex flex-column align-items-center justify-content-center">
+                <a href="../index.html" class=" d-flex align-items-center mb-3 text-decoration-none"
+                    aria-label="Move It home">
+                    <img src="../svg's/svg_Home/box-seam.svg" height="40" alt="">
+                </a>
+
+                <p class="text-body-secondary">
+                    <strong>MOVE It</strong> with care.
+                </p>
+            </div>
+
+            <div class="col">
+                <h5>Quick Links</h5>
+
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="../index.html" class="d-inline-block nav-link p-0 text-body-secondary">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./about.html" class="d-inline-block nav-link p-0 text-body-secondary">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./services.html" class="d-inline-block nav-link p-0 text-body-secondary">
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#contact_section" class="d-inline-block nav-link p-0 text-body-secondary">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h5>Our Services</h5>
+
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="./services.html" class="d-inline-block nav-link p-0 text-body-secondary">
+                            Home Moving
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./services.html" class="nav-link p-0 text-body-secondary">
+                            Furniture Transport
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./services.html" class="d-inline-block nav-link p-0 text-body-secondary">
+                            Packing &amp; Unpacking
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#contact_section" class="d-inline-block nav-link p-0 text-body-secondary">
+                            More
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h5>Contact Us</h5>
+
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="#contact_section" class="d-inline-block nav-link p-0 text-body-secondary text-break">
+                            Elmahdi25benabbou@gmail.com
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#contact_section" class="d-inline-block nav-link p-0 text-body-secondary">
+                            +49 15511077231
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2 text-body-secondary">
+                        76133 Karlsruhe, Deutschland
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="copyright text-center border-top pt-3 mt-4">
+            <p>
+                © <span>Copyright</span>
+                <strong class="px-1 sitename">MOVE It</strong>
+                <span>All Rights Reserved</span>
+            </p>
+
+            <div class="credits">
+                Designed and Distributed by
+                <a href="https://github.com/Elmahdi25?tab=repositories">ELMAHDI BENABBOU</a>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

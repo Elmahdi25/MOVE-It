@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<div align="center">
+  <img src="./docs/box-seam.svg" alt="Move It box logo" width="80">
+  <h1>MOVE It 📦</h1>
+  <p><strong>A fresh start deserves a smoother move.</strong></p>
+  <p>A responsive moving-company website built while learning HTML, CSS, and Bootstrap.</p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+  <img src="https://img.shields.io/badge/Project-Learning%20by%20Building-2563EB?style=for-the-badge" alt="Learning project">
+  <p>
+    <a href="#preview">Preview</a> ·
+    <a href="#what-you-can-explore">Features</a> ·
+    <a href="#what-i-learned">What I learned</a>
+    <a href="#run-it-locally">Run locally</a> ·
+  </p>
+</div>
+<!-- BEFORE PUBLISHING:
+1. Check the logo path above against your repository.
+2. Replace YOUR_REPOSITORY_NAME in the clone command.
+3. Add docs/move-it-demo.gif and docs/move-it-preview.png, then uncomment their image lines.
+4. Add your deployed URL below once a live demo exists.
+5. Check that the described features match the finished project.
+6. Verify third-party template and image credits before publishing.
+-->
+<h2 id="why-i-built-this">Why I built this</h2>
+<p>Moving can be stressful. Finding help should feel straightforward.</p>
+<p><strong>Move It</strong> is my take on a welcoming moving-company website: visitors can discover services, meet the team, and share the details of their next move. I started with Bootstrap components and adapted the content, layout, and styling around one consistent moving-company theme.</p>
+<p>This is a fictional business and a frontend learning project. Its purpose is to show how I turn reusable components into a connected website while developing my skills as a future application developer.</p>
+<h2 id="preview">Preview</h2>
+<!-- Add your live website link here: [Explore the live website](https://YOUR-LIVE-URL) -->
+<p><strong>A quick tour:</strong> start on the homepage, explore the services, then try the moving-request form.
+<img src="docs/contact_modal.gif" alt="contact and modal"></p>
+<br>
+<p><img src="docs/mobile_layout.gif" alt="mobile layout"></p>
+<br>
+<p><img src="docs/features_mobile_layout.png" alt="features mobile layout"></p>
+<br>
+<p><img src="docs/footer_desktop.png" alt="footer desktop"></p>
+<br>
+<p><img src="docs/home_nav_header.png" alt="home"></p>
+<h2 id="what-you-can-explore">What you can explore</h2>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>What it offers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Home</strong></td>
+<td>A welcoming introduction and navigation to the main pages.</td>
+</tr>
+<tr>
+<td><strong>About</strong></td>
+<td>The company story, mission, values, and fictional team.</td>
+</tr>
+<tr>
+<td><strong>Services</strong></td>
+<td>Home moving, furniture transport, and packing and unpacking.</td>
+</tr>
+<tr>
+<td><strong>Moving request</strong></td>
+<td>Contact details, calling code, moving information, and space for additional instructions.</td>
+</tr>
+<tr>
+<td><strong>Helpful details</strong></td>
+<td>A step-by-step moving guide and frequently asked questions.</td>
+</tr>
+<tr>
+<td><strong>Responsive layout</strong></td>
+<td>Navigation, cards, and columns that adapt to different screen sizes.</td>
+</tr>
+<tr>
+<td><strong>Footer</strong></td>
+<td>Quick links, service links, and contact information.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="a-closer-look-at-the-form">A closer look at the form</h3>
+<p>The contact experience helps visitors explain their move rather than simply sending a generic message. It includes personal details, a country calling code, a move type, and additional comments.</p>
+<p><strong>Demo limitation:</strong> form validation and confirmation messages are frontend interactions. Without a connected backend or form service, they do not send email, save a request, arrange a call, or create a booking. A success modal alone is not proof that information was received.</p>
+<h2 id="built-with">Built with</h2>
+<ul>
+<li><strong>HTML</strong> — page structure, links, and form elements.</li>
+<li><strong>CSS</strong> — custom styling, image proportions, spacing, and responsive adjustments.</li>
+<li><strong>Bootstrap</strong> — the grid system, navigation, cards, dropdowns, forms, and modals.</li>
+<li><strong>VS Code</strong> — editing and local development.</li>
+</ul>
+<p>Bootstrap interactive components require its JavaScript bundle. Follow the dependency links already included in the project's HTML files.</p>
+<h2 id="run-it-locally">Run it locally</h2>
+<h3 id="1-get-the-project">1. Get the project</h3>
+<p>Replace <code>YOUR_REPOSITORY_NAME</code> with the actual repository name:</p>
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> https://github.com/Elmahdi25/YOUR_REPOSITORY_NAME.git
+<span class="hljs-built_in">cd</span> YOUR_REPOSITORY_NAME
+</div></code></pre>
+<p>You can also download the repository ZIP from GitHub and extract it.</p>
+<h3 id="2-start-a-local-server">2. Start a local server</h3>
+<p>From the project folder, run one of these commands if Python is installed:</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Windows</span>
+py -m http.server 8000
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-comment"># macOS / Linux</span>
+python3 -m http.server 8000
+</div></code></pre>
+<p>Open <strong>http://localhost:8000</strong> in your browser. If the homepage is not named <code>index.html</code>, open its filename from the directory listing.</p>
+<p>Alternatively, use VS Code's <strong>Live Server</strong> extension and open the homepage with Live Server.</p>
+<p>No package-install command is included because this README describes a plain HTML/CSS project. Internet access is needed for any dependencies loaded through CDN links.</p>
+<h3 id="3-explore">3. Explore</h3>
+<ul>
+<li>Resize the browser to try the responsive layout.</li>
+<li>Open the hamburger navigation on a smaller screen.</li>
+<li>Browse the service cards and FAQ.</li>
+<li>Try the form's required fields and confirmation interaction.</li>
+</ul>
+<h2 id="what-i-learned">What I learned</h2>
+<p>This project helped me understand the difference between making something look right at one size and making it work across different layouts.</p>
+<ul>
+<li><strong>Bootstrap's grid:</strong> using columns and breakpoints to change layouts as screens get smaller.</li>
+<li><strong>Flexbox:</strong> centering a card inside its column and distinguishing element alignment from text alignment.</li>
+<li><strong>Image sizing:</strong> preserving proportions with <code>object-fit</code> and avoiding distorted icons.</li>
+<li><strong>Forms:</strong> using labels, appropriate input types, required fields, and validation feedback.</li>
+<li><strong>Navigation:</strong> connecting pages and linking directly to sections with IDs.</li>
+<li><strong>Customization:</strong> adapting template components into a consistent theme instead of leaving their default content unchanged.</li>
+</ul>
+<h2 id="next-improvements">Next improvements</h2>
+<ul>
+<li><input type="checkbox" id="checkbox0"><label for="checkbox0">Add a live demo, screenshots, and a short GIF.</label></li>
+<li><input type="checkbox" id="checkbox1"><label for="checkbox1">Connect the moving-request form to a backend or form service.</label></li>
+<li><input type="checkbox" id="checkbox2"><label for="checkbox2">Expand pickup and delivery details, furniture quantities, and optional packing services.</label></li>
+<li><input type="checkbox" id="checkbox3"><label for="checkbox3">Check keyboard navigation, labels, contrast, and image descriptions across all pages.</label></li>
+<li><input type="checkbox" id="checkbox4"><label for="checkbox4">Optimize image sizes and test the site on more devices.</label></li>
+</ul>
+<h2 id="feedback-and-contributions">Feedback and contributions</h2>
+<p>Suggestions are welcome, especially around responsive layouts, accessibility, and form usability.</p>
+<p>If you find something that could work better, open an issue with the page, screen size, and steps to reproduce it. For a code contribution, fork the repository, make a focused change, and open a pull request explaining what changed and why.</p>
+<h2 id="credits-and-license">Credits and license</h2>
+<p>Built and customized by <strong><a href="https://github.com/Elmahdi25">Elmahdi Benabbou</a></strong>.</p>
+<p>Some starting components come from Bootstrap examples. Keep a record of any other templates, photos, and icons used, including their source and applicable terms. Third-party assets retain their own licenses and attribution requirements.</p>
+<h2 id="support-the-project">Support the project</h2>
+<p>If you enjoyed exploring Move It, a star on the repository or useful feedback is appreciated. You can discover more of my work on <strong><a href="https://github.com/Elmahdi25">my GitHub profile</a></strong>.</p>
+<!-- Optional: add a donation link here only after you set up your own donation page. -->
+<hr>
+<div align="center">
+  <strong>Built one component, one challenge, and one improvement at a time.</strong>
+</div>
+
+</body>
+</html>
