@@ -18,14 +18,6 @@
   </p>
 </div>
 
-<!-- BEFORE PUBLISHING:
-1. Check the logo path above against your repository.
-2. Replace YOUR_REPOSITORY_NAME in the clone command.
-3. Add docs/move-it-demo.gif and docs/move-it-preview.png, then uncomment their image lines.
-4. Add your deployed URL below once a live demo exists.
-5. Check that the described features match the finished project.
-6. Verify third-party template and image credits before publishing.
--->
 
 ## Why I built this
 
@@ -37,7 +29,7 @@ This is a fictional business and a frontend learning project. Its purpose is to 
 
 ## Preview
 
-<!-- Add your live website link here: [Explore the live website](https://YOUR-LIVE-URL) -->
+https://elmahdi25.github.io/MOVE-It/html/about.html
 
 **A quick tour:** start on the homepage, explore the services, then try the moving-request form.
 ![contact and modal](docs/contact_modal.gif)
