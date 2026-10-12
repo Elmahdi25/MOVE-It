@@ -1,23 +1,37 @@
 .my-navbar {
-      min-height: 100px;
-    }
+  min-height: 100px;
+}
 
-    .navbar-brand img {
-      height: 45px;
-      margin-right: 10px;
-    }
+.navbar-brand img {
+  height: 45px;
+  margin-right: 10px;
+}
 
-    .navbar-brand span {
-      font-weight: bold;
-      vertical-align: middle;
-    }
+.navbar-brand span {
+  font-weight: bold;
+  vertical-align: middle;
+}
 
-    .feature-icon {
-      width: 4rem;
-      height: 4rem;
-      border-radius: .75rem;
-    }
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+}
 
-    .search-input::placeholder{
-      font-size: 20px;
-    }
+.search-input::placeholder {
+  font-size: 20px;
+}
+
+#carouselExampleIndicators .carousel-item img {
+  filter: brightness(90%);
+}
+
+#carouselExampleIndicators .carousel-control-prev-icon,
+#carouselExampleIndicators .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+#carouselExampleIndicators .carousel-control-prev,
+#carouselExampleIndicators .carousel-control-next {
+  opacity: 1;
+}
